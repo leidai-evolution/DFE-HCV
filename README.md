@@ -1,3 +1,6 @@
+Please double check file paths before running the scripts.
+
+-----------------------------------
 Analysis: Illumina sequencing data
 
 - parse.py:  parse Illumina Paired-End data (FASTQ)
@@ -7,12 +10,10 @@ Analysis: Illumina sequencing data
 - NS5Amutlist.py:  generate a list of NNK mutants in the library
 - runall.sh: shell script. Pipeline
 
-Note: check folder destinations before running the scripts.
-Input: FASTQ files
-Output (used in downstream analysis)
-Folder: .\output\count_5mismatch
-Filename: NS5A_FD 
-Format: aa position; aa mutation; nt mutation; nt distance from WT; synonymous; read count (mutant; WT; depth) for all 6 conditions (input, transfection, selected at DCV 0, 10, 40 ,100pM)
+Notes:
+- Input: FASTQ files
+- Output (used in downstream analysis): .\output\count_5mismatch\NS5A_FD 
+- Output format: aa position; aa mutation; nt mutation; nt distance from WT; synonymous; read count (mutant; WT; depth) for all 6 conditions (input, transfection, selected at DCV 0, 10, 40 ,100pM)
 
 ------------------------------------
 Analysis: fitness
