@@ -1,13 +1,13 @@
 # DFE-HCV
 
 Analysis: Illumina sequencing data
-C:\Users\LDai\Dropbox\Programming\analysis_sunlab\analysis_HCV_NS5A
-•	parse.py:  parse Illumina Paired-End data (FASTQ)
-•	mapping.py: map sequencing reads to HCV NS5A reference sequence
-•	callmuation.py: identify mutations by comparing the mapped reads to NS5A reference sequence
-•	count.py: count the number of reads for each mutant in the library
-•	NS5Amutlist.py:  generate a list of NNK mutants in the library
-•	runall.sh: shell script. Pipeline
+parse.py:  parse Illumina Paired-End data (FASTQ)
+mapping.py: map sequencing reads to HCV NS5A reference sequence
+callmuation.py: identify mutations by comparing the mapped reads to NS5A reference sequence
+count.py: count the number of reads for each mutant in the library
+NS5Amutlist.py:  generate a list of NNK mutants in the library
+runall.sh: shell script. Pipeline
+
 Note: check folder destinations before running the scripts.
 Input: FASTQ files
 Output (used in downstream analysis)
@@ -15,6 +15,7 @@ Folder: .\output\count_5mismatch
 Filename: NS5A_FD 
 Format: aa position; aa mutation; nt mutation; nt distance from WT; synonymous; read count (mutant; WT; depth) for all 6 conditions (input, transfection, selected at DCV 0, 10, 40 ,100pM)
 
+--------------------
 Analysis: fitness
 analysis_RF.m
 -calculate mutant frequency
@@ -49,10 +50,12 @@ Fit DFE: R codes adapted from Biesel et al 2007
 MLEpar.R
 -main function: handles input and output
 -normalize fitness values of beneficial mutations by the threshold, which is determined by synonymous mutations
+
 gpdmle.R
 -perform Maximum Likelihood Estimate (MLE) of parameters of GPD and exponential distribution
 -perform likelihood ratio test
 -bootstrap of test statistics 
+
 evalrtfunc_modified.R
 -fixed two bugs from the original codes
 
